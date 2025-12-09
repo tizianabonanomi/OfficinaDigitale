@@ -59,10 +59,22 @@
         margin-bottom: 10px;
       }
 
+      /* Link eleganti, chiari, non sottolineati */
       a {
-        color: var(--text);
-        text-decoration: underline;
+        color: #f8f4f4;         /* quasi bianco, migliore leggibilità */
+        text-decoration: none;  /* niente sottolineatura */
+        font-weight: 600;        /* un po' più marcato */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25); /* sottolineatura sottilissima soft */
+        padding-bottom: 2px;
+        transition: 0.25s ease;
       }
+      
+      /* Hover minimale ma professionale */
+      a:hover {
+        color: var(--accent); /* colore della palette */
+        border-bottom-color: var(--accent);
+      }
+
 
       .note {
         font-size: 14px;
