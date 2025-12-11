@@ -11,6 +11,12 @@
       --bg: #8a6666;
       --text: #f3eded;
       --accent: #e38f7b;
+      --card-bg: rgba(0, 0, 0, 0.14);
+      --muted: #f3ededb0;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -19,102 +25,333 @@
       background: var(--bg);
       color: var(--text);
       font-family: "Actor", sans-serif;
-      line-height: 1.8;
-      font-size: 18px;
+      line-height: 1.5;
     }
 
     .page {
-      max-width: 860px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 32px 18px 70px;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    header {
+      margin-bottom: 1.75rem;
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0.9;
+    }
+
+    .back-link span {
+      transform: translateY(-1px);
+    }
+
+    .back-link:hover {
+      opacity: 1;
     }
 
     h1 {
-      font-size: 26px;
-      margin-bottom: 12px;
+      margin: 0.75rem 0 0.35rem;
+      font-size: 1.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
-    h2 {
-      margin-top: 36px;
-      font-size: 21px;
-      font-weight: 700;
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 650px;
     }
 
-    .status-block {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 10px;
-      padding: 18px 22px;
-      margin-bottom: 20px;
+    .legend {
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
     }
 
-    .done { color: #d1c7c0; text-decoration: line-through; }
-    .progress { color: var(--accent); font-weight: 600; }
-    .todo { opacity: 0.7; }
+    .legend-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
 
-    a {
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      opacity: 0.9;
+    }
+
+    .dot.done {
+      background: #9ad7a7;
+    }
+
+    .dot.in-progress {
+      background: #f5d27a;
+    }
+
+    .dot.next {
+      background: #f3a6a6;
+    }
+
+    .cards {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 1.25rem 1.25rem 1.3rem;
+      border: 1px solid rgba(243, 237, 237, 0.22);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .status {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(243, 237, 237, 0.45);
+      white-space: nowrap;
+      align-self: flex-start;
+    }
+
+    .status.done {
+      background: rgba(154, 215, 167, 0.18);
+      border-color: rgba(154, 215, 167, 0.9);
+    }
+
+    .status.in-progress {
+      background: rgba(245, 210, 122, 0.15);
+      border-color: rgba(245, 210, 122, 0.9);
+    }
+
+    .status.next {
+      background: rgba(243, 166, 166, 0.15);
+      border-color: rgba(243, 166, 166, 0.9);
+    }
+
+    .status.idea {
+      background: rgba(227, 143, 123, 0.08);
+      border-style: dashed;
+    }
+
+    .card-body {
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+
+    .card-body strong {
       color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-      padding-bottom: 2px;
+      font-weight: 400;
     }
 
-    a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
+    .list {
+      margin: 0.2rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .list li {
+      margin: 0.12rem 0;
+    }
+
+    .footnote {
+      margin-top: 2.2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    @media (min-width: 900px) {
+      h1 {
+        font-size: 2.1rem;
+      }
+
+      .page {
+        padding-top: 3rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
+  <div class="page">
+    <header>
+      <a href="../index.html" class="back-link">
+        <span>←</span><span>torna alla panoramica</span>
+      </a>
+      <h1>Stato del progetto</h1>
+      <p class="subtitle">
+        Riepilogo ad alto livello dell’avanzamento di <strong>Presenza Digitale Essenziale</strong>:
+        cosa è già pronto, cosa stiamo rifinendo e quali sono i prossimi step di marketing e brand.
+      </p>
 
-    <h1>Stato generale del progetto</h1>
-    <p>Una visione complessiva dell’avanzamento dei 7 blocchi del pacchetto.</p>
+      <div class="legend">
+        <span class="legend-badge"><span class="dot done"></span> completato</span>
+        <span class="legend-badge"><span class="dot in-progress"></span> in corso</span>
+        <span class="legend-badge"><span class="dot next"></span> prossimo step</span>
+      </div>
+    </header>
 
-    <h2>Avanzamento dei blocchi</h2>
+    <main class="cards">
+      <!-- 1. Fondamenta di brand -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Fondamenta di brand</div>
+          <div class="status done">Completato</div>
+        </div>
+        <div class="card-body">
+          <strong>Cosa è definito:</strong>
+          <ul class="list">
+            <li>Posizionamento: consulenza premium, essenziale e concreta.</li>
+            <li>Target: founder, solopreneur, micro-imprese in fase di validazione.</li>
+            <li>Promessa: “meno caos, più chiarezza digitale”.</li>
+            <li>Tono di voce: diretto, competente, zero fuffa.</li>
+          </ul>
+        </div>
+      </article>
 
-    <div class="status-block">
-      <strong>1. Posizionamento e Direzione Creativa</strong><br>
-      <span class="progress">In corso</span>
-    </div>
+      <!-- 2. Identità visiva di base -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Identità visiva</div>
+          <div class="status done">Completato</div>
+        </div>
+        <div class="card-body">
+          <strong>Elementi pronti per l’uso:</strong>
+          <ul class="list">
+            <li>Palette colore (bg, accent, neutri) già applicata al sito.</li>
+            <li>Font principale: Actor (leggibile, pulito, senza fronzoli).</li>
+            <li>Stile card/moduli riutilizzabile su tutte le pagine.</li>
+            <li>Direzione: minimal, elegante, leggermente warm.</li>
+          </ul>
+        </div>
+      </article>
 
-    <div class="status-block">
-      <strong>2. Riorganizzazione del sito</strong><br>
-      <span class="todo">Da iniziare</span>
-    </div>
+      <!-- 3. Sito one-page / struttura -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Sito & struttura</div>
+          <div class="status in-progress">In corso</div>
+        </div>
+        <div class="card-body">
+          <strong>Stato attuale:</strong>
+          <ul class="list">
+            <li>Home / landing online con sezioni principali già impostate.</li>
+            <li>Sezione “Chi sono” e proposta di valore sintetica pronte.</li>
+            <li>Pagina stato-progetto (questa), per trasparenza sul lavoro.</li>
+            <li><em>Da rifinire:</em> microcopy CTA + collegamenti a portfolio / case study.</li>
+          </ul>
+        </div>
+      </article>
 
-    <div class="status-block">
-      <strong>3. Pagine principali</strong><br>
-      <span class="todo">Da iniziare</span>
-    </div>
+      <!-- 4. Offerta & pacchetti -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Offerta & pacchetti</div>
+          <div class="status in-progress">In corso</div>
+        </div>
+        <div class="card-body">
+          <strong>Linee guida definite:</strong>
+          <ul class="list">
+            <li>Servizio core: audit + strategia essenziale di presenza digitale.</li>
+            <li>Focalizzazione su: sito snello, messaggi chiari, primi funnel semplici.</li>
+            <li>Struttura pacchetti (base / pro / su misura) disegnata a grandi linee.</li>
+            <li><em>Da chiudere:</em> naming definitivo dei pacchetti + prezzi pubblici.</li>
+          </ul>
+        </div>
+      </article>
 
-    <div class="status-block">
-      <strong>4. Stile visivo</strong><br>
-      <span class="progress">In corso</span>
-    </div>
+      <!-- 5. Contenuti & lead magnet -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Contenuti & lead magnet</div>
+          <div class="status next">Prossimo step</div>
+        </div>
+        <div class="card-body">
+          <strong>Direzione concordata:</strong>
+          <ul class="list">
+            <li>Mini–guida / checklist su “Presenza digitale minima ma efficace”.</li>
+            <li>Formato breve, molto pratico, scaricabile dal sito.</li>
+            <li>Integrazione con form di contatto / newsletter essenziale.</li>
+            <li>Da definire: titolo definitivo e flusso email post-download.</li>
+          </ul>
+        </div>
+      </article>
 
-    <div class="status-block">
-      <strong>5. SEO locale</strong><br>
-      <span class="todo">Da iniziare</span>
-    </div>
+      <!-- 6. Presenza LinkedIn -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Presenza LinkedIn</div>
+          <div class="status next">Prossimo step</div>
+        </div>
+        <div class="card-body">
+          <strong>Linee guida operative:</strong>
+          <ul class="list">
+            <li>Ottimizzazione profilo come “hub” verso il sito.</li>
+            <li>Post focalizzati su casi reali, micro–audit e consigli concreti.</li>
+            <li>Call to action morbide verso call conoscitive o audit.</li>
+            <li>Piano editoriale light (1–2 post a settimana, formato riutilizzabile).</li>
+          </ul>
+        </div>
+      </article>
 
-    <div class="status-block">
-      <strong>6. Struttura contenuti futuri</strong><br>
-      <span class="todo">Da iniziare</span>
-    </div>
+      <!-- 7. Backend operativo -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Backend operativo</div>
+          <div class="status idea">In bozza</div>
+        </div>
+        <div class="card-body">
+          <strong>Cosa è stato mappato:</strong>
+          <ul class="list">
+            <li>Template di discovery call / intake form per nuovi clienti.</li>
+            <li>Schema base per preventivi e proposte PDF coerenti con il brand.</li>
+            <li>Checklist interna per consegna: sito + messaggi + micro–funnel.</li>
+            <li>Da tradurre in documenti pronti all’uso e automazioni minime.</li>
+          </ul>
+        </div>
+      </article>
+    </main>
 
-    <div class="status-block">
-      <strong>7. Guida manutenzione</strong><br>
-      <span class="todo">Da iniziare</span>
-    </div>
-
-    <p style="margin-top: 26px;">
-      Torna alla <p class="note">
-  <a href="../mappa.html">← Torna alla mappa dei blocchi</a>
+    <p class="footnote">
+      Questa pagina è un riepilogo “da tavolo di lavoro”: i contenuti possono evolvere
+      man mano che il progetto avanza. È pensata per avere sempre a colpo d’occhio
+      cosa è già solido e cosa stiamo costruendo adesso.
     </p>
-
-  </main>
+  </div>
 </body>
 </html>
