@@ -15,7 +15,7 @@
       :root {
         --bg: #8a6666; /* leggermente più scuro per migliorare il contrasto */
         --text: #f3eded; /* più chiaro per leggibilità */
-        --accent: #e38f7b; 
+        --accent: #e38f7b;
       }
 
       body {
@@ -65,6 +65,26 @@
 
       li {
         margin-bottom: 10px;
+      }
+
+      /* NOTE / RIGHE DI SERVIZIO IN FONDO */
+      .note {
+        font-size: 15px;
+        opacity: 0.9;
+      }
+
+      /* LINK: stesso stile elegante delle altre pagine */
+      a,
+      a:visited {
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-weight: 600;
+      }
+
+      a:hover {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
       }
 
       /* Miglioramento ancora maggiore per mobile */
@@ -146,6 +166,5 @@
         <a href="index.html">Presenza Digitale Essenziale – € 1.000</a>
       </p>
     </main>
-
   </body>
 </html>
