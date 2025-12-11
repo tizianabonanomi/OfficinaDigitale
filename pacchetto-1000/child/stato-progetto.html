@@ -32,8 +32,6 @@
       padding: 2.5rem 1.25rem 3rem;
     }
 
-    header { margin-bottom: 1.75rem; }
-
     .back-link {
       font-size: 0.85rem;
       text-transform: uppercase;
@@ -49,7 +47,7 @@
     .back-link:hover { opacity: 1; }
 
     h1 {
-      margin: 0.75rem 0 0.35rem;
+      margin-top: 0.75rem;
       font-size: 1.9rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -58,30 +56,22 @@
     .subtitle {
       font-size: 0.95rem;
       color: var(--muted);
-      max-width: 700px;
+      max-width: 680px;
     }
 
     .legend {
-      margin-top: 1.25rem;
+      margin-top: 1.2rem;
       font-size: 0.8rem;
-      color: var(--muted);
       display: flex;
-      flex-wrap: wrap;
       gap: 0.75rem;
-      align-items: center;
-    }
-
-    .legend-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
+      flex-wrap: wrap;
+      color: var(--muted);
     }
 
     .dot {
       width: 9px;
       height: 9px;
       border-radius: 999px;
-      opacity: 0.9;
     }
 
     .dot.done { background: #9ad7a7; }
@@ -91,18 +81,15 @@
     .cards {
       margin-top: 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
     }
 
     .card {
       background: var(--card-bg);
       border-radius: 18px;
-      padding: 1.25rem 1.25rem 1.3rem;
-      border: 1px solid rgba(243, 237, 237, 0.22);
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid rgba(243,237,237,0.22);
       backdrop-filter: blur(4px);
     }
 
@@ -110,6 +97,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      margin-bottom: 0.4rem;
     }
 
     .card-title {
@@ -120,54 +108,79 @@
 
     .status {
       font-size: 0.72rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(243,237,237,0.35);
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      padding: 0.15rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(243, 237, 237, 0.45);
       white-space: nowrap;
     }
 
-    .status.done {
-      background: rgba(154, 215, 167, 0.18);
-      border-color: rgba(154, 215, 167, 0.9);
-    }
-
     .status.in-progress {
-      background: rgba(245, 210, 122, 0.15);
-      border-color: rgba(245, 210, 122, 0.9);
+      background: rgba(245,210,122,0.15);
+      border-color: rgba(245,210,122,0.9);
     }
-
     .status.next {
-      background: rgba(243, 166, 166, 0.15);
-      border-color: rgba(243, 166, 166, 0.9);
+      background: rgba(243,166,166,0.15);
+      border-color: rgba(243,166,166,0.9);
+    }
+    .status.done {
+      background: rgba(154,215,167,0.2);
+      border-color: rgba(154,215,167,0.9);
     }
 
-    .card-body {
-      font-size: 0.87rem;
+    /* Pulsante aggiorna stato */
+    .update-btn {
+      margin-top: 0.4rem;
+      font-size: 0.7rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(243,237,237,0.25);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
       color: var(--muted);
+      text-decoration: none;
+      transition: 0.2s ease;
+      display: inline-block;
+    }
+    .update-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
     }
 
-    .card-body strong {
+    .card-body { font-size: 0.87rem; color: var(--muted); }
+    .card-body strong { color: var(--text); }
+
+    .list { padding-left: 1.1rem; margin-top: 0.25rem; }
+    .list li { margin-bottom: 0.2rem; }
+
+    .links {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
       color: var(--text);
-      font-weight: 400;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(243,237,237,0.25);
+      padding-bottom: 1px;
+      transition: 0.2s;
     }
 
-    .list {
-      margin: 0.2rem 0 0;
-      padding-left: 1.1rem;
-    }
-
-    .list li {
-      margin: 0.12rem 0;
+    .links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     .footnote {
-      margin-top: 2.2rem;
+      margin-top: 2.5rem;
       font-size: 0.78rem;
       color: var(--muted);
-      max-width: 680px;
     }
+
   </style>
 </head>
 
@@ -176,20 +189,19 @@
 
     <header>
       <a href="../mappa.html" class="back-link">
-        <span>←</span><span>torna alla mappa</span>
+        ← torna alla mappa
       </a>
 
       <h1>Stato del progetto</h1>
       <p class="subtitle">
-        Riepilogo dell’avanzamento dei 7 blocchi del pacchetto
+        Aggiornamento continuo dell’avanzamento dei 7 blocchi del pacchetto
         <strong>Presenza Digitale Essenziale</strong>.
-        Panoramica chiara di ciò che è completato, in corso e in arrivo.
       </p>
 
       <div class="legend">
-        <span class="legend-badge"><span class="dot done"></span> completato</span>
-        <span class="legend-badge"><span class="dot in-progress"></span> in corso</span>
-        <span class="legend-badge"><span class="dot next"></span> da avviare</span>
+        <span><span class="dot done"></span> Completato</span>
+        <span><span class="dot in-progress"></span> In corso</span>
+        <span><span class="dot next"></span> Da avviare</span>
       </div>
     </header>
 
@@ -199,16 +211,25 @@
       <article class="card">
         <div class="card-header">
           <div class="card-title">1. Posizionamento</div>
-          <div class="status in-progress">In corso</div>
+          <div>
+            <div class="status in-progress">In corso</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Focus del blocco:</strong>
+          <strong>Stato attuale:</strong>
           <ul class="list">
-            <li>Chiarezza su identità: Architettura + Interior & Lighting.</li>
-            <li>Target: seconde case, hospitality, clienti extra-Carloforte.</li>
-            <li>Definizione tono di voce: metodico, affidabile, creativo.</li>
-            <li>Messaggio centrale in via di affinamento.</li>
+            <li>Identità professionale definita.</li>
+            <li>Messaggio centrale in rafforzamento.</li>
+            <li>Target second-home / hospitality chiarito.</li>
+            <li>Direzione creativa → già impostata.</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../posizionamento.html">Modulo</a>
+          <a href="posizionamento.html">Tracking</a>
         </div>
       </article>
 
@@ -216,16 +237,24 @@
       <article class="card">
         <div class="card-header">
           <div class="card-title">2. Riorganizzazione sito</div>
-          <div class="status next">Da avviare</div>
+          <div>
+            <div class="status next">Da avviare</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Cosa comprende:</strong>
+          <strong>Previsto:</strong>
           <ul class="list">
-            <li>Pulizia pagine duplicate e contenuti obsoleti.</li>
+            <li>Pulizia contenuti obsoleti.</li>
             <li>Struttura essenziale e ordinata.</li>
-            <li>Navigazione chiara per utenti non tecnici.</li>
-            <li>Preparazione sezioni per progetti e articoli.</li>
+            <li>Navigazione intuitiva.</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../riorganizzazione-sito.html">Modulo</a>
+          <a href="riorganizzazione.html">Tracking</a>
         </div>
       </article>
 
@@ -233,16 +262,25 @@
       <article class="card">
         <div class="card-header">
           <div class="card-title">3. Pagine principali</div>
-          <div class="status next">Da avviare</div>
+          <div>
+            <div class="status next">Da avviare</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Pagine previste:</strong>
+          <strong>Pagine da configurare:</strong>
           <ul class="list">
-            <li>Home: messaggio forte e percezione professionale.</li>
-            <li>About: metodo, valori, identità professionale.</li>
-            <li>Servizi: 3 macro aree (Architettura / Interior & Lighting / Pratiche edilizie).</li>
-            <li>Projects: impostazione dei primi 3 progetti.</li>
+            <li>Home (messaggio chiaro)</li>
+            <li>About (metodo + valori)</li>
+            <li>Servizi (3 aree)</li>
+            <li>Projects (3 iniziali)</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../pagine-principali.html">Modulo</a>
+          <a href="pagine-principali.html">Tracking</a>
         </div>
       </article>
 
@@ -250,16 +288,24 @@
       <article class="card">
         <div class="card-header">
           <div class="card-title">4. Stile visivo</div>
-          <div class="status in-progress">In corso</div>
+          <div>
+            <div class="status in-progress">In corso</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Elementi già attivi:</strong>
+          <strong>Elementi attivi:</strong>
           <ul class="list">
             <li>Palette mediterranea contemporanea.</li>
-            <li>Font Actor applicato all’intero sistema.</li>
-            <li>Componenti visuali: card, moduli, layout minimalista.</li>
-            <li>Da completare: coerenza con immagini e social.</li>
+            <li>Font Actor.</li>
+            <li>Componenti UI consistenti.</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../stile-visivo.html">Modulo</a>
+          <a href="stile-visivo.html">Tracking</a>
         </div>
       </article>
 
@@ -267,55 +313,81 @@
       <article class="card">
         <div class="card-header">
           <div class="card-title">5. SEO locale</div>
-          <div class="status next">Da avviare</div>
+          <div>
+            <div class="status next">Da avviare</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Impostazione prevista:</strong>
+          <strong>Step successivi:</strong>
           <ul class="list">
-            <li>Ottimizzazione titoli e meta descriptions.</li>
-            <li>Gerarchia H1–H2 pulita e leggibile.</li>
-            <li>Focus keyword: “architetto Carloforte”, “interior design Sardegna”.</li>
-            <li>Check indicizzazione e performance.</li>
+            <li>Meta title + description ottimizzati.</li>
+            <li>Gerarchia titoli corretta.</li>
+            <li>Keyword locali mirate.</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../seo-locale.html">Modulo</a>
+          <a href="seo-locale.html">Tracking</a>
         </div>
       </article>
 
-      <!-- 6. Struttura contenuti futuri -->
+      <!-- 6. Contenuti futuri -->
       <article class="card">
         <div class="card-header">
           <div class="card-title">6. Contenuti futuri</div>
-          <div class="status next">Da avviare</div>
+          <div>
+            <div class="status next">Da avviare</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Cosa includerà:</strong>
+          <strong>Previsto:</strong>
           <ul class="list">
-            <li>Modello per nuovi progetti (layout standard).</li>
-            <li>Template articoli tematici (es. “la veranda come luogo emozionale”).</li>
-            <li>Nomenclatura progetti (es. “TB House”).</li>
+            <li>Template nuovi progetti.</li>
+            <li>Articoli emozionali.</li>
+            <li>Nomenclatura standard (es. TB House).</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../struttura-contenuti.html">Modulo</a>
+          <a href="struttura-contenuti.html">Tracking</a>
         </div>
       </article>
 
-      <!-- 7. Guida manutenzione -->
+      <!-- 7. Manutenzione -->
       <article class="card">
         <div class="card-header">
-          <div class="card-title">7. Guida manutenzione</div>
-          <div class="status next">Da avviare</div>
+          <div class="card-title">7. Manutenzione</div>
+          <div>
+            <div class="status next">Da avviare</div>
+            <a class="update-btn" href="#">Aggiorna stato</a>
+          </div>
         </div>
+
         <div class="card-body">
-          <strong>Cosa prevederà:</strong>
+          <strong>Checklist prevista:</strong>
           <ul class="list">
-            <li>Come caricare progetti e articoli.</li>
-            <li>Come mantenere ordine e coerenza.</li>
-            <li>Errori da evitare per non compromettere SEO e struttura.</li>
+            <li>Caricare nuovi progetti.</li>
+            <li>Pubblicare articoli.</li>
+            <li>Come mantenere coerenza e SEO.</li>
           </ul>
+        </div>
+
+        <div class="links">
+          <a href="../guida-manutenzione.html">Modulo</a>
+          <a href="manutenzione.html">Tracking</a>
         </div>
       </article>
 
     </main>
 
     <p class="footnote">
-      Questa pagina mostra lo stato del lavoro in tempo reale, con aggiornamenti per ogni blocco del pacchetto.
+      Questa pagina riassume lo stato dei 7 blocchi del pacchetto e verrà aggiornata man mano che i lavori avanzano.
     </p>
 
   </div>
