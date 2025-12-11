@@ -73,6 +73,24 @@
         margin-top: 20px;
       }
 
+      .pill-link {
+        display: inline-block;
+        padding: 6px 14px;
+        background: rgba(255,255,255,0.10);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 20px;
+        color: #f3eded;
+        font-size: 15px;
+        text-decoration: none;
+        transition: 0.25s ease;
+      }
+
+.pill-link:hover {
+  background: rgba(255,255,255,0.20);
+  border-color: rgba(255,255,255,0.35);
+}
+
+
       @media (max-width: 480px) {
         body { font-size: 17px; }
         h1 { font-size: 24px; }
@@ -139,6 +157,10 @@
         Torna al pacchetto principale:  
         <a href="index.html">→ Presenza Digitale Essenziale – € 1.000</a>
       </p>
+      <p class="note">
+        <a href="supporto.html" class="pill-link">Pacchetti di supporto →</a>
+      </p>
+
 
     </main>
   </body>
