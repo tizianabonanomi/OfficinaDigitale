@@ -2,75 +2,199 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>victoriaarchontis STUDIO | Architettura & Interior in Sud Sardegna</title>
-  <meta name="description" content="Studio di architettura e interior & lighting design per seconde case e hospitality in Sud Sardegna. Approccio metodico e creativo, gestione integrata fino al cantiere.">
+  <meta name="description" content="Studio di architettura e interior & lighting design per seconde case e ospitalità in Sud Sardegna. Metodo chiaro, progetto consapevole, gestione integrata fino al cantiere.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --sand:#B9A998; --soft:#DCCCB8; --plaster:#E7DCCF;
-      --brown:#5A4435; --terracotta:#E38F7B; --raspberry:#CD3C36;
-      --max:980px;
+    :root {
+      --sand: #B9A998;
+      --soft: #DCCCB8;
+      --plaster: #E7DCCF;
+      --brown: #5A4435;
+      --terracotta: #E38F7B;
+      --raspberry: #CD3C36;
+      --max: 980px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--sand);color:var(--brown);line-height:1.65}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-    header{position:sticky;top:0;background:rgba(185,169,152,.92);border-bottom:1px solid rgba(90,68,53,.18)}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-    .brand{font-weight:500;letter-spacing:.02em;text-decoration:none;color:inherit}
-    .menu a{margin-left:18px;text-decoration:none;font-weight:300;letter-spacing:.06em;text-transform:uppercase;font-size:12px;color:inherit}
-    .menu a:hover{color:var(--raspberry)}
-    .hero{padding:70px 0 90px}
-    h1{margin:0 0 10px;font-size:42px;font-weight:500;letter-spacing:.02em}
-    .tagline{margin:0 0 22px;font-weight:300;letter-spacing:.18em;text-transform:lowercase}
-    p{margin:0 0 18px;font-weight:300;max-width:70ch}
-    .cta{display:inline-block;margin-top:14px;padding:12px 26px;border:1px solid var(--terracotta);text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:inherit}
-    .cta:hover{background:var(--terracotta);color:#fff}
-    .photo{width:100%;max-width:560px;background:var(--plaster);border:1px solid rgba(90,68,53,.18);margin:28px 0 10px}
-    .photo img{display:block;width:100%;height:auto}
-    .section{padding:86px 0}
-    .soft{background:var(--soft)}
-    h2{margin:0 0 16px;font-size:28px;font-weight:500;letter-spacing:.02em}
-    h3{margin:0 0 10px;font-size:14px;font-weight:400;letter-spacing:.10em;text-transform:uppercase}
-    .rule{width:44px;height:1px;background:var(--brown);margin:24px 0 34px}
-    .grid3{display:grid;gap:44px;grid-template-columns:repeat(3,1fr)}
-    @media (max-width:860px){.grid3{grid-template-columns:1fr}}
-    footer{background:var(--plaster);padding:52px 0;border-top:1px solid rgba(90,68,53,.18)}
-    .small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:300}
 
-    /* FOTO HOME: controllata, non dominante */
-.home-photo {
-  max-width: 520px;      /* limite visivo */
-  height: 320px;         /* altezza fissa */
-  overflow: hidden;      /* taglia l'eccesso */
-  margin: 32px 0 16px;
-  border: 1px solid rgba(90,68,53,.18);
-  background: #E7DCCF;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.home-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* CROPPING AUTOMATICO */
-  object-position: center top; /* viso leggermente in alto */
-  display: block;
-}
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--sand);
+      color: var(--brown);
+      line-height: 1.65;
+    }
 
-    .home-photo {
-  max-width: 480px;
-  height: 260px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(185,169,152,0.95);
+      border-bottom: 1px solid rgba(90,68,53,0.2);
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .menu a {
+      margin-left: 18px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .menu a:hover {
+      color: var(--raspberry);
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 96px 22px 110px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 500;
+      margin: 0 0 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .tagline {
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: lowercase;
+      margin-bottom: 26px;
+    }
+
+    .hero-text {
+      max-width: 60ch;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 28px;
+      border: 1px solid var(--terracotta);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .cta:hover {
+      background: var(--terracotta);
+      color: #fff;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 86px 22px;
+    }
+
+    .soft {
+      background: var(--soft);
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+      margin: 0 0 16px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .rule {
+      width: 44px;
+      height: 1px;
+      background: var(--brown);
+      margin: 24px 0 34px;
+    }
+
+    p {
+      font-weight: 300;
+      max-width: 70ch;
+      margin-bottom: 18px;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 44px;
+    }
+
+    @media (max-width: 860px) {
+      .grid3 {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 34px;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--plaster);
+      border-top: 1px solid rgba(90,68,53,0.2);
+      padding: 52px 22px;
+    }
+
+    .footer-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .small {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
   </style>
 </head>
 
 <body>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html">victoriaarchontis STUDIO</a>
+  <div class="nav">
+    <div class="brand">victoriaarchontis STUDIO</div>
     <nav class="menu">
       <a href="about.html">About</a>
       <a href="servizi.html">Servizi</a>
@@ -82,63 +206,55 @@
 
 <main>
 
-  <section class="wrap hero">
-
-    <!-- 1) H1 -->
+  <!-- HERO -->
+  <section class="hero">
     <h1>Architettura & Interior in Sud Sardegna</h1>
 
-    <!-- 2) Tagline -->
     <div class="tagline">methodic creativity</div>
 
-    <!-- 3) Paragrafo posizionamento -->
-    <p>
+    <p class="hero-text">
       Progetti per seconde case e ospitalità, pensati anche per chi vive lontano:
-      un metodo chiaro per prendere decisioni solide e mantenere coerenza dall’idea al cantiere.
+      un metodo chiaro per prendere decisioni solide e mantenere coerenza
+      dall’idea al cantiere.
     </p>
 
-    <!-- ✅ 4) FOTO HOME: QUI (sotto H1 + testo) -->
-    <!-- Carica la versione "ambientata" e metti qui il suo URL/file -->
-   <div class="photo home-photo">
-  <img
-    src="images/victoria-archontis-architetto-sud-sardegna.jpg"
-    alt="Victoria Archontis, architetta specializzata in seconde case e interior design in Sud Sardegna"
-  >
-</div>
-
-
-    <!-- 5) CTA -->
-    <a class="cta" href="#contatti">Parliamo del tuo progetto</a>
-
+    <a href="#contatti" class="cta">Parliamo del tuo progetto</a>
   </section>
 
-  <section class="section soft">
+  <!-- COSA FACCIO -->
+  <section class="soft">
     <div class="wrap">
       <h2>Tre aree, una regia unica</h2>
       <div class="rule"></div>
+
       <div class="grid3">
         <div>
           <h3>Architettura</h3>
-          <p>Ristrutturazioni e progetti per seconde case: spazi funzionali, luminosi, duraturi.</p>
+          <p>Ristrutturazioni e progetti per seconde case, con attenzione a spazio, luce e durabilità.</p>
         </div>
         <div>
           <h3>Interior & Lighting</h3>
-          <p>Materiali e luce per comfort, atmosfera e identità degli ambienti.</p>
+          <p>Materiali e luce per comfort, atmosfera e identità coerente degli ambienti.</p>
         </div>
         <div>
           <h3>Gestione integrata</h3>
-          <p>Pratiche e coordinamento del percorso: chiarezza e coerenza fino al cantiere.</p>
+          <p>Supporto alle decisioni e coordinamento del percorso, per ridurre incertezza e ripensamenti.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contatti">
+  <!-- CONTATTI -->
+  <section id="contatti">
     <div class="wrap">
       <h2>Contatti</h2>
       <div class="rule"></div>
+
       <p>
-        Se vuoi capire se il mio approccio è adatto al tuo progetto, scrivimi.
+        Se vuoi capire se il mio approccio è adatto al tuo progetto,
+        puoi contattarmi direttamente.
       </p>
+
       <p>
         Email: <a href="mailto:info@victoriarchontistudio.it">info@victoriarchontistudio.it</a><br>
         Telefono: <a href="tel:+393481498583">+39 348 1498583</a>
@@ -149,10 +265,11 @@
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="footer-wrap">
     <div class="small">victoriaarchontis STUDIO</div>
     <p>Architettura · Interior & Lighting · Gestione integrata del progetto</p>
   </div>
 </footer>
+
 </body>
 </html>
