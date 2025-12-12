@@ -32,14 +32,20 @@
 
     h1 {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     h2 {
       margin-top: 36px;
       font-size: 22px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 12px;
     }
 
     .color-row {
@@ -50,8 +56,8 @@
     }
 
     .color {
-      width: 120px;
-      height: 120px;
+      width: 135px;
+      height: 135px;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
@@ -59,6 +65,7 @@
       padding: 10px;
       font-size: 14px;
       background-size: cover;
+      border: 1px solid rgba(255,255,255,0.25);
     }
 
     .hex {
@@ -66,7 +73,6 @@
       font-size: 13px;
     }
 
-    /* Link stile consistente */
     a {
       color: var(--text);
       text-decoration: none;
@@ -85,6 +91,15 @@
       opacity: 0.9;
       margin-top: 20px;
     }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 6px;
+      font-size: 13px;
+      margin-left: 8px;
+    }
   </style>
 </head>
 
@@ -92,18 +107,39 @@
   <main class="page">
 
     <h1>Palette Colori</h1>
-    <p>Qui trovi le 4 proposte di palette. La <strong>Palette D</strong> è quella più coerente con il tuo biglietto da visita e il tono mediterraneo contemporaneo.</p>
+    <p>Questa pagina raccoglie le proposte cromatiche. La <strong>Palette D</strong> è quella consigliata, basata sulla tua business card e sullo stile “mediterraneo contemporaneo”.</p>
 
-    <!-- PALETTE D — BUSINESS CARD -->
-    <h2>Palette D – Mediterranean Contemporary (Business Card)</h2>
+    <!-- PALETTE D — CONSIGLIATA -->
+    <h2>Palette D – Mediterranean Contemporary <span class="tag">Consigliata</span></h2>
+    <p class="subtitle">Versione ottimizzata (5 colori principali + 1 accento raro). Ideale per architettura / interior design.</p>
+
     <div class="color-row">
-      <div class="color" style="background:#B9A998;">Mediterranean Sand<br><span class="hex">#B9A998</span></div>
-      <div class="color" style="background:#5A4435;">Stone Brown<br><span class="hex">#5A4435</span></div>
-      <div class="color" style="background:#DCCCB8;">Soft Clay<br><span class="hex">#DCCCB8</span></div>
-      <div class="color" style="background:#E7DCCF;">Light Lime Plaster<br><span class="hex">#E7DCCF</span></div>
-      <div class="color" style="background:#E38F7B;">Terracotta Glow<br><span class="hex">#E38F7B</span></div>
-      <div class="color" style="background:#CD3C36;">Raspberry Accent<br><span class="hex">#CD3C36</span></div>
+      <div class="color" style="background:#E38F7B;">
+        Terracotta Glow<br>
+        <span class="hex">#E38F7B</span><br>Primario
+      </div>
+      <div class="color" style="background:#B9A998;">
+        Mediterranean Sand<br>
+        <span class="hex">#B9A998</span><br>Secondario caldo
+      </div>
+      <div class="color" style="background:#E7DCCF;">
+        Light Lime Plaster<br>
+        <span class="hex">#E7DCCF</span><br>Neutro chiaro
+      </div>
+      <div class="color" style="background:#5A4435;">
+        Stone Brown<br>
+        <span class="hex">#5A4435</span><br>Neutro scuro (testi)
+      </div>
+      <div class="color" style="background:#DCCCB8;">
+        Soft Clay<br>
+        <span class="hex">#DCCCB8</span><br>Supporto / bordi
+      </div>
+      <div class="color" style="background:#CD3C36;">
+        Raspberry Accent<br>
+        <span class="hex">#CD3C36</span><br>Accento raro
+      </div>
     </div>
+
 
     <!-- PALETTE A -->
     <h2>Palette A – Soft Neutral Warm</h2>
