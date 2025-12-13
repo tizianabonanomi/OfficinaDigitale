@@ -45,23 +45,12 @@ header{
 .brand{
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
-
-.brand-logo{
-  width: 18px;
-  height: auto;
-  opacity: .85;
-  transform: translateY(1px); /* micro allineamento ottico */
-}
-
 
 .brand-name{
-  font-size:13px;
-  font-weight:400;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--brown);
+  line-height: 1;
 }
 
 .menu a{
