@@ -173,19 +173,6 @@ footer {
   font-weight: 300;
 }
 
-.footer-logo {
-  width: 14px;          /* 🔑 QUI si risolve tutto */
-  height: auto;
-  opacity: 0.75;
-  display: block;
-}
-
-.footer-desc {
-  font-size: 13px;
-  font-weight: 300;
-  margin: 0;
-}
-
 
 /* ========== PLACEHOLDER VISIVI (per mock e cliente non tech) ========== */
 
