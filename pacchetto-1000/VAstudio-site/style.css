@@ -309,6 +309,27 @@ footer{
   color: #fff;
 }
 
+/* ===== CTA GROUP: spaziatura corretta ===== */
+
+.cta{
+  margin-top: 10px;     /* respiro dal testo sopra */
+}
+
+.cta + .cta{
+  margin-left: 18px;    /* spazio orizzontale tra bottoni */
+}
+
+@media (max-width: 600px){
+  .cta{
+    display: block;
+    margin-top: 14px;
+  }
+
+  .cta + .cta{
+    margin-left: 0;
+    margin-top: 12px;   /* stack verticale pulito su mobile */
+  }
+}
 
 
 /* Responsive */
