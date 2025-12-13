@@ -1,0 +1,216 @@
+/* ===========================
+   victoriaarchontis STUDIO
+   Mock site – CSS comune
+   Palette confermata cliente
+   =========================== */
+
+:root{
+  --sand:#ECD5BC;      /* fondi */
+  --soft:#D9BAA7;      /* sezioni */
+  --plaster:#ECD5BC;   /* variante chiara */
+  --brown:#745237;     /* scuro primario */
+  --brown2:#856953;    /* scuro secondario */
+  --accent:#CD3C36;    /* accento deciso */
+  --max:980px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--sand);
+  color:var(--brown);
+  line-height:1.65;
+}
+
+a{color:inherit;text-decoration:none}
+
+/* Layout */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.section{padding:86px 0}
+.soft{background:rgba(217,186,167,.55)}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(236,213,188,.92);
+  border-bottom:1px solid rgba(116,82,55,.18);
+  backdrop-filter: blur(6px);
+}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+
+.brand{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:inherit
+}
+.brand-logo{width:22px;height:auto;display:block}
+.brand-name{
+  font-size:14px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brown)
+}
+
+.menu a{
+  margin-left:18px;
+  font-size:12px;
+  font-weight:300;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.menu a:hover{color:var(--accent)}
+
+/* Typography */
+h1,h2{
+  font-family:'Source Serif 4',serif;
+  font-weight:500;
+  letter-spacing:.01em;
+}
+h1{margin:0 0 12px;font-size:38px}
+h2{margin:0 0 16px;font-size:28px}
+
+h3{
+  margin:0 0 10px;
+  font-size:14px;
+  font-weight:400;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:var(--brown2);
+}
+
+p{margin:0 0 18px;font-weight:300;max-width:76ch;color:rgba(116,82,55,.92)}
+.lead{font-size:16px;max-width:78ch}
+.micro{font-size:14px;color:rgba(116,82,55,.85)}
+
+.rule{width:44px;height:1px;background:var(--brown);margin:24px 0 34px;opacity:.7}
+
+/* Buttons */
+.cta{
+  display:inline-block;
+  padding:12px 22px;
+  border:1.5px solid var(--accent);
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.cta:hover{background:var(--accent);color:#fff}
+
+.cta.secondary{
+  border-color:rgba(116,82,55,.35);
+}
+.cta.secondary:hover{
+  background:rgba(116,82,55,.08);
+  color:var(--brown);
+}
+
+/* Grids */
+.grid2{display:grid;gap:40px;grid-template-columns:1fr 1fr}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+
+/* Cards */
+.card{
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(116,82,55,.18);
+  padding:26px;
+}
+
+/* Boxes (About/Services “non è per te se…”) */
+.box{
+  border:1px solid rgba(116,82,55,.18);
+  background:rgba(236,213,188,.55);
+  padding:18px 18px 14px;
+  max-width:78ch;
+  margin-top:18px;
+}
+.box ul{margin:10px 0 0;padding-left:18px}
+.box li{margin:8px 0}
+
+/* Footer */
+footer{
+  background:rgba(236,213,188,.75);
+  border-top:1px solid rgba(116,82,55,.18);
+  padding:52px 0;
+  font-size:14px;
+}
+.small{
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:300;
+  color:var(--brown2);
+}
+.footer-links a{
+  border-bottom:1px solid rgba(116,82,55,.25);
+  padding-bottom:2px;
+}
+.footer-links a:hover{
+  color:var(--accent);
+  border-bottom-color:var(--accent);
+}
+
+/* About photo */
+.about-photo{
+  max-width:420px;
+  height:420px;
+  overflow:hidden;
+  margin:24px 0 32px;
+  border:1px solid rgba(116,82,55,.18);
+  background:var(--plaster);
+}
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+/* Projects media */
+.project-media{
+  margin:18px 0 22px;
+  border:1px solid rgba(116,82,55,.18);
+  background:rgba(255,255,255,.10);
+  overflow:hidden;
+}
+.project-media img{
+  display:block;
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  object-position:center;
+}
+.project-media .placeholder{
+  height:340px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(116,82,55,.75);
+  padding:18px;
+  text-align:center;
+}
+
+/* Projects pills */
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px}
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border:1px solid rgba(116,82,55,.22);
+  border-radius:8px;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:300;
+  color:rgba(116,82,55,.85);
+  background:rgba(255,255,255,.08);
+}
+
+/* Responsive */
+@media (max-width:860px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  h1{font-size:32px}
+  .brand-name{letter-spacing:.10em}
+  .project-media img,.project-media .placeholder{height:280px}
+}
