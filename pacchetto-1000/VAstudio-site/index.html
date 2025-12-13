@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>victoriaarchontis STUDIO | Architettura & Interior in Sud Sardegna</title>
-  <meta name="description" content="Studio di architettura e interior & lighting design per seconde case e ospitalità in Sud Sardegna. Metodo chiaro, progetto consapevole, gestione integrata fino al cantiere.">
+  <title>victoriaarchontis STUDIO | Architettura, Interior & Lighting in Sud Sardegna</title>
+  <meta name="description" content="Studio di architettura per seconde case e ospitalità in Sud Sardegna. Regia completa dall’idea al cantiere, coerenza materica e lighting design come parte dell’architettura.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --sand: #B9A998;
-      --soft: #DCCCB8;
-      --plaster: #E7DCCF;
-      --brown: #5A4435;
-      --terracotta: #E38F7B;
-      --raspberry: #CD3C36;
+      /* Palette confermata cliente */
+      --sand: #ECD5BC;      /* chiaro 2 / fondi */
+      --soft: #D9BAA7;      /* luce / sezioni */
+      --plaster: #ECD5BC;   /* variante chiara */
+      --brown: #745237;     /* scuro primario */
+      --brown2:#856953;     /* scuro secondario */
+      --terracotta: #CD3C36;/* accento deciso */
       --max: 980px;
     }
 
@@ -36,9 +37,10 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(185,169,152,0.95);
-      border-bottom: 1px solid rgba(90,68,53,0.2);
+      background: rgba(236,213,188,0.92);
+      border-bottom: 1px solid rgba(116,82,55,0.18);
       z-index: 10;
+      backdrop-filter: blur(6px);
     }
 
     .nav {
@@ -67,6 +69,7 @@
       font-weight: 400;
       letter-spacing: 0.14em;
       text-transform: uppercase;
+      color: var(--brown);
     }
 
     .menu a {
@@ -75,15 +78,16 @@
       font-weight: 300;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: var(--brown);
     }
 
-    .menu a:hover { color: var(--raspberry); }
+    .menu a:hover { color: var(--terracotta); }
 
     /* HERO */
     .hero {
       max-width: 760px;
       margin: 0 auto;
-      padding: 96px 22px 110px;
+      padding: 96px 22px 92px;
       padding-left: 64px; /* asimmetria controllata */
     }
 
@@ -92,25 +96,50 @@
       font-size: 44px;
       font-weight: 500;
       letter-spacing: 0.005em;
-      margin: 0 0 16px;
+      margin: 0 0 14px;
     }
 
     .tagline {
       font-weight: 300;
       letter-spacing: 0.18em;
       text-transform: lowercase;
-      margin-bottom: 26px;
+      margin-bottom: 18px;
+      color: var(--brown2);
+    }
+
+    /* NUOVO: frase guida (posizionamento) */
+    .hero-sub {
+      max-width: 62ch;
+      font-weight: 300;
+      margin: 0 0 18px;
     }
 
     .hero-text {
-      max-width: 60ch;
-      margin-bottom: 36px;
+      max-width: 62ch;
+      margin: 0 0 28px;
       font-weight: 300;
+      color: rgba(116,82,55,0.92);
+    }
+
+    .hero-note {
+      max-width: 62ch;
+      margin: 0 0 34px;
+      font-weight: 300;
+      color: rgba(116,82,55,0.82);
+      border-left: 2px solid rgba(116,82,55,0.25);
+      padding-left: 14px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .cta {
       display: inline-block;
-      padding: 12px 28px;
+      padding: 12px 22px;
       border: 1.5px solid var(--terracotta);
       font-size: 12px;
       letter-spacing: 0.12em;
@@ -122,10 +151,20 @@
       color: #fff;
     }
 
-    /* SECTIONS */
-    section { padding: 86px 22px; }
+    .cta.secondary {
+      border-color: rgba(116,82,55,0.35);
+      color: var(--brown);
+    }
 
-    .soft { background: var(--soft); }
+    .cta.secondary:hover {
+      background: rgba(116,82,55,0.08);
+      color: var(--brown);
+    }
+
+    /* SECTIONS */
+    section { padding: 82px 22px; }
+
+    .soft { background: rgba(217,186,167,0.55); }
 
     .wrap {
       max-width: var(--max);
@@ -146,6 +185,7 @@
       letter-spacing: 0.10em;
       text-transform: uppercase;
       margin-bottom: 10px;
+      color: var(--brown2);
     }
 
     .rule {
@@ -153,6 +193,7 @@
       height: 1px;
       background: var(--brown);
       margin: 24px 0 34px;
+      opacity: 0.7;
     }
 
     p {
@@ -167,17 +208,22 @@
       gap: 44px;
     }
 
+    .micro {
+      color: rgba(116,82,55,0.85);
+      font-size: 14px;
+    }
+
     @media (max-width: 860px) {
       .grid3 { grid-template-columns: 1fr; }
-      .hero { padding-left: 22px; } /* niente offset su mobile */
+      .hero { padding-left: 22px; }
       h1 { font-size: 34px; }
       .brand-name { letter-spacing: 0.10em; }
     }
 
     /* FOOTER */
     footer {
-      background: var(--plaster);
-      border-top: 1px solid rgba(90,68,53,0.2);
+      background: rgba(236,213,188,0.75);
+      border-top: 1px solid rgba(116,82,55,0.18);
       padding: 52px 22px;
     }
 
@@ -191,6 +237,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-weight: 300;
+      color: var(--brown2);
     }
   </style>
 </head>
@@ -200,12 +247,11 @@
 <header>
   <div class="nav">
     <div class="brand">
-      <!-- Metti il file qui: docs/images/logo-symbol.png -->
       <img src="images/logo-symbol.png" alt="" class="brand-logo">
       <span class="brand-name">victoriaarchontis STUDIO</span>
     </div>
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Menu">
       <a href="about.html">About</a>
       <a href="servizi.html">Servizi</a>
       <a href="progetti.html">Progetti</a>
@@ -218,21 +264,35 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Architettura & Interior in Sud Sardegna</h1>
+    <h1>Architettura, Interior & Lighting in Sud Sardegna</h1>
 
     <div class="tagline">methodic creativity</div>
 
-    <p class="hero-text">
-      Progetti per seconde case e ospitalità, pensati anche per chi vive lontano:
-      un metodo chiaro per prendere decisioni solide e mantenere coerenza
-      dall’idea al cantiere.
+    <!-- Frase guida (posizionamento) -->
+    <p class="hero-sub">
+      Studio di architettura che guida il progetto dall’idea al cantiere, con metodo,
+      coerenza materica e lighting design come parte integrante dell’architettura.
     </p>
 
-    <a href="#contatti" class="cta">Parliamo del tuo progetto</a>
+    <p class="hero-text">
+      Lavoro su seconde case e ospitalità: volumi, aperture, finiture e rapporto con il contesto,
+      in continuità con la distribuzione degli spazi e la selezione dei materiali.
+    </p>
+
+    <!-- Guardrail soft: NO decorazione / NO render -->
+    <p class="hero-note">
+      Ogni scelta è progettata e verificata: niente soluzioni “da render” non realizzabili,
+      niente eccessi di tendenza. Un percorso strutturato, con attenzione a budget, cantiere e manutenzione.
+    </p>
+
+    <div class="cta-row">
+      <a href="#contatti" class="cta">Parliamo del tuo progetto</a>
+      <a href="progetti.html" class="cta secondary">Vedi i progetti</a>
+    </div>
   </section>
 
   <!-- COSA FACCIO -->
-  <section class="soft">
+  <section class="soft" id="servizi">
     <div class="wrap">
       <h2>Tre aree, una regia unica</h2>
       <div class="rule"></div>
@@ -240,15 +300,29 @@
       <div class="grid3">
         <div>
           <h3>Architettura</h3>
-          <p>Ristrutturazioni e progetti per seconde case, con attenzione a spazio, luce e durabilità.</p>
+          <p>
+            Ristrutturazioni e progetti per seconde case: prospetti, volumi, aperture,
+            finiture e relazione con il contesto.
+          </p>
+          <p class="micro">Obiettivo: un progetto costruibile, coerente e durabile.</p>
         </div>
+
         <div>
           <h3>Interior & Lighting</h3>
-          <p>Materiali e luce per comfort, atmosfera e identità coerente degli ambienti.</p>
+          <p>
+            Interni e luce come continuità del progetto: palette controllate, finiture opache,
+            materiali locali e atmosfera definita dalla luce.
+          </p>
+          <p class="micro">La luce non è un accessorio: è parte dell’architettura.</p>
         </div>
+
         <div>
-          <h3>Gestione integrata</h3>
-          <p>Supporto alle decisioni e coordinamento del percorso, per ridurre incertezza e ripensamenti.</p>
+          <h3>Pratiche & Direzione lavori</h3>
+          <p>
+            Continuità tra progetto, autorizzazioni e cantiere: coordinamento con imprese e fornitori,
+            attenzione ai dettagli costruttivi e alle normative.
+          </p>
+          <p class="micro">Riduce imprevisti, errori e ripensamenti.</p>
         </div>
       </div>
     </div>
@@ -277,7 +351,7 @@
 <footer>
   <div class="footer-wrap">
     <div class="small">victoriaarchontis STUDIO</div>
-    <p>Architettura · Interior & Lighting · Gestione integrata del progetto</p>
+    <p>Architettura · Interior & Lighting · Pratiche & Direzione lavori</p>
   </div>
 </footer>
 
