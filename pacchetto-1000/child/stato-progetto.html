@@ -12,7 +12,11 @@
       --bg: #8a6666;
       --text: #f3eded;
       --accent: #e38f7b;
+      --line: rgba(255,255,255,0.22);
+      --panel: rgba(255,255,255,0.06);
     }
+
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -32,7 +36,7 @@
 
     h1 {
       font-size: 26px;
-      margin-bottom: 12px;
+      margin: 0 0 12px;
       font-weight: 700;
     }
 
@@ -43,22 +47,15 @@
       font-weight: 700;
     }
 
-    ul {
-      margin-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
+    ul { margin-left: 1.2rem; }
+    li { margin-bottom: 10px; }
 
     .done {
       color: #d7ccc7;
       text-decoration: line-through;
     }
 
-    .pending {
-      opacity: 0.85;
-    }
+    .pending { opacity: 0.9; }
 
     a {
       color: var(--text);
@@ -76,8 +73,78 @@
     .note {
       font-size: 14px;
       opacity: 0.85;
-      margin-top: 20px;
+      margin-top: 18px;
     }
+
+    /* --- BLOCCO CARD --- */
+    .legend {
+      font-size: 14px;
+      opacity: 0.88;
+      margin: 6px 0 14px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 860px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 14px 14px 12px;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      opacity: 0.95;
+      white-space: nowrap;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      font-size: 14px;
+      opacity: 0.92;
+    }
+
+    .card li { margin: 8px 0; }
+    .muted { opacity: 0.85; }
   </style>
 </head>
 
@@ -86,13 +153,13 @@
 
     <h1>Stato del progetto – Presenza Digitale Essenziale</h1>
 
+    <!-- ✅ Sezione che ti piace (la lasciamo) -->
     <h2>Attività completate</h2>
     <ul>
       <li class="done">Analisi iniziale posizionamento e target</li>
-      <li class="done">Definizione approccio progettuale e valori</li>
-      <li class="done">Prima proposta palette</li>
+      <li class="done">Definizione approccio progettuale e valori (metodico, sobrio, sofisticato)</li>
       <li class="done">Conferma palette da parte della cliente</li>
-      <li class="done">Creazione mock sito completo (Home, About, Servizi, Progetti, Blog placeholder)</li>
+      <li class="done">Creazione mock sito (Home, About, Servizi, Progetti, Blog placeholder)</li>
     </ul>
 
     <h2>Attività in corso</h2>
@@ -117,15 +184,125 @@
     <h2>Attività da completare</h2>
     <ul>
       <li>Conferma finale dei testi da parte della cliente</li>
-      <li>Adattamento visivo definitivo su Supersite Aruba</li>
+      <li>Adattamento su Supersite Aruba (replica nei limiti del pacchetto)</li>
       <li>Pubblicazione versione finale del sito</li>
+      <li>Guida manutenzione (come aggiornare senza rompere struttura/SEO)</li>
     </ul>
 
+    <!-- ✅ NUOVA SEZIONE: card per blocchi -->
+    <h2>Stato per blocchi (1–7)</h2>
+    <div class="legend">
+      <strong>Legenda:</strong>
+      🟢 completato · 🟡 in corso / in validazione · 🔴 bloccato (input necessario) · ⚪ non iniziato
+    </div>
+
+    <div class="cards">
+
+      <section class="card">
+        <div class="card-top">
+          <h3>1) Posizionamento</h3>
+          <span class="status">🟡 In validazione</span>
+        </div>
+        <p class="muted">Messaggio centrale, target, tono di voce.</p>
+        <ul>
+          <li class="done">Risposte cliente raccolte (punti di forza / cosa non comunicare)</li>
+          <li class="done">Direzione: metodo + regia completa + lighting come firma</li>
+          <li>Da chiudere: testi finali coerenti con la sua voce</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>2) Riorganizzazione sito</h3>
+          <span class="status">🟡 In attesa replica</span>
+        </div>
+        <p class="muted">Pulizia e struttura ordinata su Supersite.</p>
+        <ul>
+          <li class="done">Struttura definita nel mock</li>
+          <li>Da fare: replica nei limiti Supersite (no backup → cautela)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>3) Pagine principali (4)</h3>
+          <span class="status">🟢 Mock completato</span>
+        </div>
+        <p class="muted">Home, About, Servizi, Progetti.</p>
+        <ul>
+          <li class="done">Pagine create nel mock</li>
+          <li>Da fare: inserire contenuti finali + immagini reali</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>4) Stile visivo</h3>
+          <span class="status">🟡 Parziale</span>
+        </div>
+        <p class="muted">Palette, font, gerarchie e coerenza.</p>
+        <ul>
+          <li class="done">Palette confermata dalla cliente</li>
+          <li class="done">Impostazione visiva applicata nel mock</li>
+          <li>Da verificare: resa finale su Supersite (limiti piattaforma)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>5) SEO base</h3>
+          <span class="status">🟡 Da finalizzare</span>
+        </div>
+        <p class="muted">Titoli/descrizioni e struttura leggibile.</p>
+        <ul>
+          <li class="done">Struttura pagine predisposta</li>
+          <li>Dipende dai testi finali (keyword e meta)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>6) Blog & contenuti futuri</h3>
+          <span class="status">🟡 Predisposto</span>
+        </div>
+        <p class="muted">Blog attivo + struttura per nuovi contenuti.</p>
+        <ul>
+          <li class="done">Pagina blog placeholder (evita 404)</li>
+          <li>Da fare: definire 3 articoli iniziali + 1 categoria base</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>7) Guida manutenzione</h3>
+          <span class="status">⚪ Non iniziato</span>
+        </div>
+        <p class="muted">Istruzioni per aggiornare senza perdere coerenza/SEO.</p>
+        <ul>
+          <li>Da fare a fine progetto: guida rapida + checklist</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-top">
+          <h3>Dipendenze / input cliente</h3>
+          <span class="status">🔴 Necessari</span>
+        </div>
+        <p class="muted">Per chiudere testi e SEO.</p>
+        <ul>
+          <li>Testi definitivi (o brief per riscrittura)</li>
+          <li>Scelta immagini: hero + 3 progetti + ritratto About</li>
+          <li>Conferma uso Blog in nav su Supersite (voce menu / URL)</li>
+        </ul>
+      </section>
+
+    </div>
+
     <p class="note">
-      Questo stato progetto documenta il lavoro svolto e delimita le attività incluse nel pacchetto.
-      Il mock serve come riferimento visivo e concettuale, non come implementazione tecnica finale.
+      Il mock è un riferimento visivo e concettuale. La versione finale verrà replicata nei limiti della piattaforma Supersite Aruba.
     </p>
 
+    <!-- Link coerenti con la tua struttura attuale (mappa è nella stessa root del pacchetto) -->
     <p class="note"><a href="../mappa.html">→ Mappa dei blocchi</a></p>
     <p class="note"><a href="../index.html">→ Pacchetto Presenza Digitale Essenziale</a></p>
 
