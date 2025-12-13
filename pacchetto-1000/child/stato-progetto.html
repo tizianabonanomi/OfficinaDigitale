@@ -2,355 +2,144 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Stato del Progetto – Presenza Digitale Essenziale</title>
+  <title>Stato del progetto – Presenza Digitale Essenziale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet" />
 
   <style>
-    :root {
-      --bg: #8a6666;
-      --text: #f3eded;
-      --accent: #e38f7b;
-      --card-bg: rgba(0, 0, 0, 0.14);
-      --muted: #f3ededb0;
+    :root { --bg:#8a6666; --text:#f3eded; --accent:#e38f7b; --line:rgba(255,255,255,0.22); }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Actor",sans-serif;line-height:1.8;font-size:18px;}
+    .page{max-width:980px;margin:0 auto;padding:32px 18px 70px;}
+    h1{font-size:26px;margin:0 0 10px;font-weight:700;}
+    .subtitle{opacity:.9;margin:0 0 22px;font-size:15px}
+    a{color:var(--text);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:2px;font-weight:600;}
+    a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px;}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}}
+    .card{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:16px 16px 14px;
+      background:rgba(255,255,255,0.06);
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Actor", sans-serif;
-      line-height: 1.5;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2.5rem 1.25rem 3rem;
-    }
-
-    .back-link {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      opacity: 0.9;
-    }
-
-    .back-link:hover { opacity: 1; }
-
-    h1 {
-      margin-top: 0.75rem;
-      font-size: 1.9rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 680px;
-    }
-
-
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-    }
-
-    .dot.done { background: #9ad7a7; }
-    .dot.in-progress { background: #f5d27a; }
-    .dot.next { background: #f3a6a6; }
-
-    .cards {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 1.25rem;
-      border: 1px solid rgba(243,237,237,0.22);
-      backdrop-filter: blur(4px);
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 0.4rem;
-    }
-
-    .card-title {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .status {
-      font-size: 0.72rem;
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(243,237,237,0.35);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      white-space: nowrap;
-    }
-
-    .status.in-progress {
-      background: rgba(245,210,122,0.15);
-      border-color: rgba(245,210,122,0.9);
-    }
-    .status.next {
-      background: rgba(243,166,166,0.15);
-      border-color: rgba(243,166,166,0.9);
-    }
-    .status.done {
-      background: rgba(154,215,167,0.2);
-      border-color: rgba(154,215,167,0.9);
-    }
-
-    .card-body { font-size: 0.87rem; color: var(--muted); }
-    .card-body strong { color: var(--text); }
-
-    .list { padding-left: 1.1rem; margin-top: 0.25rem; }
-    .list li { margin-bottom: 0.2rem; }
-
-    .links {
-      margin-top: 0.6rem;
-      font-size: 0.78rem;
-      display: flex;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-    }
-
-    .links a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(243,237,237,0.25);
-      padding-bottom: 1px;
-      transition: 0.2s;
-    }
-
-    .links a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    .footnote {
-      margin-top: 2.5rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
+    .card h2{margin:0 0 8px;font-size:18px;font-weight:700;}
+    .tag{display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);opacity:.95;margin-left:8px;}
+    .kpi{font-size:14px;opacity:.9;margin:0 0 10px}
+    ul{margin:0;padding-left:18px}
+    li{margin:8px 0}
+    .done{opacity:.85;text-decoration:line-through}
+    .warn{color:#ffe7d8}
+    .sep{height:1px;background:var(--line);margin:20px 0}
+    .links{margin-top:22px;font-size:14px;opacity:.9}
+    .links p{margin:8px 0}
   </style>
 </head>
 
 <body>
-  <div class="page">
+<main class="page">
+  <h1>Stato del progetto – Presenza Digitale Essenziale</h1>
+  <p class="subtitle">
+    Tracking operativo (mock esterno + replica nei limiti Supersite Aruba).
+  </p>
 
-    <header>
-      <a href="../mappa.html" class="back-link">
-        ← torna alla mappa
-      </a>
+  <div class="grid">
 
-      <h1>Stato del progetto</h1>
-      <p class="subtitle">
-        Aggiornamento continuo dell’avanzamento dei 7 blocchi del pacchetto
-        <strong>Presenza Digitale Essenziale</strong>.
-      </p>
-      
-    </header>
+    <!-- 1 -->
+    <section class="card">
+      <h2>1) Posizionamento & Direzione Creativa <span class="tag">🟡 In validazione</span></h2>
+      <p class="kpi">Obiettivo: messaggio chiaro + target extra-Carloforte + tono “metodico, sobrio, sofisticato”.</p>
+      <ul>
+        <li class="done">Raccolta risposte cliente (punti di forza / cosa NON comunicare)</li>
+        <li class="done">Direzione: metodo + regia completa + lighting come firma</li>
+        <li class="done">Palette: confermata dalla cliente</li>
+        <li class="warn">In attesa: conferma su messaggio Home + taglio comunicativo finale</li>
+      </ul>
+    </section>
 
-    <main class="cards">
+    <!-- 2 -->
+    <section class="card">
+      <h2>2) Riorganizzazione & Struttura sito <span class="tag">🟢 Mock completato</span></h2>
+      <p class="kpi">Obiettivo: struttura essenziale, ordinata, comprensibile per non tecnici.</p>
+      <ul>
+        <li class="done">Architettura 4 pagine (Home / About / Servizi / Progetti)</li>
+        <li class="done">Navigazione coerente + CTA</li>
+        <li class="done">Blog previsto in nav (placeholder)</li>
+      </ul>
+    </section>
 
-      <!-- 1. Posizionamento -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">1. Posizionamento</div>
-          <div>
-            <div class="status in-progress">In corso</div>
-          </div>
-        </div>
+    <!-- 3 -->
+    <section class="card">
+      <h2>3) Impostazione stilistica & visiva <span class="tag">🟢 Chiuso</span></h2>
+      <p class="kpi">Obiettivo: minimalismo editoriale + gerarchie chiare + coerenza.</p>
+      <ul>
+        <li class="done">Palette cliente confermata</li>
+        <li class="done">Scelte tipografiche e spaziature coerenti</li>
+        <li class="done">Decisione: nessun simbolo/logo grafico in header/footer (solo tipografia)</li>
+      </ul>
+    </section>
 
-        <div class="card-body">
-          <strong>Stato attuale:</strong>
-          <ul class="list">
-            <li>Identità professionale definita.</li>
-            <li>Messaggio centrale in rafforzamento.</li>
-            <li>Target second-home / hospitality chiarito.</li>
-            <li>Direzione creativa → già impostata.</li>
-          </ul>
-        </div>
+    <!-- 4 -->
+    <section class="card">
+      <h2>4) Testi & Linguaggio <span class="tag">🔴 Bloccato (input)</span></h2>
+      <p class="kpi">Obiettivo: testi finali allineati alla voce della cliente (non provvisori).</p>
+      <ul>
+        <li class="warn">In attesa: testi definitivi dalla cliente <em>oppure</em> brief per riscrittura</li>
+        <li>Da fare: revisione Home (visitor-first), About (metodo/valori), Servizi (3 macro-aree), Progetti (schede)</li>
+      </ul>
+    </section>
 
-        <div class="links">
-          <a href="../posizionamento.html">Modulo</a>
-          <a href="posizionamento.html">Tracking</a>
-        </div>
-      </article>
+    <!-- 5 -->
+    <section class="card">
+      <h2>5) SEO di base <span class="tag">🟡 Impostato</span></h2>
+      <p class="kpi">Obiettivo: struttura Google-friendly, keyword locali e long-tail extra-Carloforte.</p>
+      <ul>
+        <li class="done">Gerarchie H1/H2 + descrizioni base predisposte</li>
+        <li class="warn">Da finalizzare dopo testi definitivi (title/meta/heading)</li>
+      </ul>
+    </section>
 
-      <!-- 2. Riorganizzazione sito -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">2. Riorganizzazione sito</div>
-          <div>
-            <div class="status next">Da avviare</div>
-          </div>
-        </div>
+    <!-- 6 -->
+    <section class="card">
+      <h2>6) Struttura contenuti futuri <span class="tag">🟡 Predisposto</span></h2>
+      <p class="kpi">Obiettivo: progetti e blog aggiornabili senza “disordine”.</p>
+      <ul>
+        <li class="done">Sezione “Dal blog” in Home (placeholder)</li>
+        <li class="done">Pagina Blog mock con placeholder (no 404)</li>
+        <li>Da fare: definire 3 categorie + 3 titoli articoli reali</li>
+      </ul>
+    </section>
 
-        <div class="card-body">
-          <strong>Previsto:</strong>
-          <ul class="list">
-            <li>Pulizia contenuti obsoleti.</li>
-            <li>Struttura essenziale e ordinata.</li>
-            <li>Navigazione intuitiva.</li>
-          </ul>
-        </div>
+    <!-- 7 -->
+    <section class="card">
+      <h2>7) Handover & guida manutenzione <span class="tag">⚪ Non iniziato</span></h2>
+      <p class="kpi">Obiettivo: consegna istruzioni per aggiornare progetti/blog senza rompere SEO.</p>
+      <ul>
+        <li>Da fare a fine lavoro: guida rapida + cosa evitare + checklist aggiornamenti</li>
+      </ul>
+    </section>
 
-        <div class="links">
-          <a href="../riorganizzazione-sito.html">Modulo</a>
-          <a href="riorganizzazione.html">Tracking</a>
-        </div>
-      </article>
-
-      <!-- 3. Pagine principali -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">3. Pagine principali</div>
-          <div>
-            <div class="status next">Da avviare</div>
-          </div>
-        </div>
-
-        <div class="card-body">
-          <strong>Pagine da configurare:</strong>
-          <ul class="list">
-            <li>Home (messaggio chiaro)</li>
-            <li>About (metodo + valori)</li>
-            <li>Servizi (3 aree)</li>
-            <li>Projects (3 iniziali)</li>
-          </ul>
-        </div>
-
-        <div class="links">
-          <a href="../pagine-principali.html">Modulo</a>
-          <a href="pagine-principali.html">Tracking</a>
-        </div>
-      </article>
-
-      <!-- 4. Stile visivo -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">4. Stile visivo</div>
-          <div>
-            <div class="status in-progress">In corso</div>
-          </div>
-        </div>
-
-        <div class="card-body">
-          <strong>Elementi attivi:</strong>
-          <ul class="list">
-            <li>Palette mediterranea contemporanea.</li>
-            <li>Fonts</li>
-            <li>Componenti UI consistenti.</li>
-          </ul>
-        </div>
-
-        <div class="links">
-          <a href="../stile-visivo.html">Modulo</a>
-          <a href="stile-visivo.html">Tracking</a>
-        </div>
-      </article>
-
-      <!-- 5. SEO locale -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">5. SEO locale</div>
-          <div>
-            <div class="status next">Da avviare</div>
-          </div>
-        </div>
-
-        <div class="card-body">
-          <strong>Step successivi:</strong>
-          <ul class="list">
-            <li>Meta title + description ottimizzati.</li>
-            <li>Gerarchia titoli corretta.</li>
-            <li>Keyword locali mirate.</li>
-          </ul>
-        </div>
-
-        <div class="links">
-          <a href="../seo-locale.html">Modulo</a>
-          <a href="seo-locale.html">Tracking</a>
-        </div>
-      </article>
-
-      <!-- 6. Contenuti futuri -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">6. Contenuti futuri</div>
-          <div>
-            <div class="status next">Da avviare</div>
-          </div>
-        </div>
-
-        <div class="card-body">
-          <strong>Previsto:</strong>
-          <ul class="list">
-            <li>Template nuovi progetti.</li>
-            <li>Articoli emozionali.</li>
-            <li>Nomenclatura standard (es. TB House).</li>
-          </ul>
-        </div>
-
-        <div class="links">
-          <a href="../struttura-contenuti.html">Modulo</a>
-          <a href="struttura-contenuti.html">Tracking</a>
-        </div>
-      </article>
-
-      <!-- 7. Manutenzione -->
-      <article class="card">
-        <div class="card-header">
-          <div class="card-title">7. Manutenzione</div>
-          <div>
-            <div class="status next">Da avviare</div>
-          </div>
-        </div>
-
-        <div class="card-body">
-          <strong>Checklist prevista:</strong>
-          <ul class="list">
-            <li>Caricare nuovi progetti.</li>
-            <li>Pubblicare articoli.</li>
-            <li>Come mantenere coerenza e SEO.</li>
-          </ul>
-        </div>
-
-        <div class="links">
-          <a href="../guida-manutenzione.html">Modulo</a>
-          <a href="manutenzione.html">Tracking</a>
-        </div>
-      </article>
-
-    </main>
-
-    <p class="footnote">
-      Questa pagina riassume lo stato dei 7 blocchi del pacchetto e verrà aggiornata man mano che i lavori avanzano.
-    </p>
+    <!-- INPUT ATTESI -->
+    <section class="card">
+      <h2>Input attesi dalla cliente <span class="tag">⏳</span></h2>
+      <p class="kpi">Per sbloccare il blocco 4 e finalizzare SEO.</p>
+      <ul>
+        <li>Conferma struttura e tono (OK / modifiche)</li>
+        <li>Testi finali (o brief per riscrittura)</li>
+        <li>Scelta immagini: 1 hero + 3 progetti + 1 ritratto About</li>
+        <li>Conferma gestione Blog su Supersite (URL/voce menu)</li>
+      </ul>
+    </section>
 
   </div>
+
+  <div class="sep"></div>
+
+  <div class="links">
+    <p><a href="../index.html">→ Pacchetto</a></p>
+    <p><a href="../mappa.html">→ Mappa dei 7 blocchi</a></p>
+    <p><a href="tracking.html">→ Tracking & log decisioni</a></p>
+  </div>
+</main>
 </body>
 </html>
