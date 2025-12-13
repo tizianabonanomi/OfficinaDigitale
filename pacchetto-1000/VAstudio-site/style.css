@@ -277,6 +277,38 @@ footer{
   letter-spacing: .08em;
 }
 
+/* ===== CTA: un solo comportamento (come "Parliamo del tuo progetto") ===== */
+
+.cta,
+.cta:visited{
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1.5px solid var(--accent);
+  color: var(--brown);
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-right: 14px;
+}
+
+.cta:hover{
+  background: var(--accent);
+  color: #fff;
+}
+
+/* se vuoi mantenere un "secondario" SOLO come bordo più soft,
+   ma con lo stesso hover del primario */
+.cta.secondary{
+  border-color: rgba(116,82,55,.35);
+}
+
+.cta.secondary:hover{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 
 
 /* Responsive */
