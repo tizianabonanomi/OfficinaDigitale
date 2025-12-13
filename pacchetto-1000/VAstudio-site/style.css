@@ -174,6 +174,66 @@ footer{
   color:var(--brown2);
 }
 
+/* ========== PLACEHOLDER VISIVI (per mock e cliente non tech) ========== */
+
+.placeholder{
+  min-height: 220px;
+  border: 1px dashed rgba(116,82,55,.35);
+  background: rgba(236,213,188,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(116,82,55,.75);
+}
+
+/* contenitore media progetto / hero */
+.project-media{
+  max-width: 760px;
+}
+
+/* card blog placeholder */
+.card{
+  background: rgba(236,213,188,.55);
+  border: 1px solid rgba(116,82,55,.18);
+  padding: 22px;
+}
+
+.card h3{
+  margin-bottom: 8px;
+}
+
+.card .micro{
+  font-size: 13px;
+  opacity: .85;
+}
+
+
+/* ========== FOTO PERSONA (controllata, sobria) ========== */
+
+.photo{
+  max-width: 420px;
+  aspect-ratio: 1 / 1;       /* quadrato elegante */
+  overflow: hidden;
+  border: 1px solid rgba(116,82,55,.18);
+  background: rgba(236,213,188,.6);
+  margin: 28px 0 34px;
+}
+
+.photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* niente deformazioni */
+  object-position: center;   /* volto sempre centrato */
+  display: block;
+}
+
+
 /* Responsive */
 @media (max-width:860px){
   .grid3{grid-template-columns:1fr}
@@ -181,3 +241,5 @@ footer{
   h1{font-size:32px}
   .brand-name{letter-spacing:.10em}
 }
+
+
