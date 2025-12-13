@@ -356,6 +356,25 @@ footer{
   display: block;
 }
 
+/* ===== BRAND: logo + nome allineati ===== */
+.brand{
+  display: inline-flex;
+  align-items: center;   /* allineamento verticale perfetto */
+  gap: 10px;             /* distanza logo-testo */
+}
+
+.brand-logo{
+  width: 22px;
+  height: 22px;          /* forziamo quadrato, così non “balla” */
+  object-fit: contain;
+  display: block;
+}
+
+.brand-name{
+  line-height: 1;        /* evita disallineamento ottico */
+}
+
+
 @media (max-width: 860px) {
   .about-layout {
     grid-template-columns: 1fr;
