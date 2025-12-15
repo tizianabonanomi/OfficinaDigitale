@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Questionario – Victoria Archontis Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <!-- se hai un logo, metti src -->
+      <!-- <img class="brand-logo" src="assets/logo.svg" alt=""> -->
+      <div class="brand-name">victoriaarchontis STUDIO</div>
+    </a>
+    <nav class="menu">
+      <a href="index.html#servizi">Servizi</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero section--cloud">
+  <div class="hero-inner">
+    <div class="tagline">carloforte · sardegna</div>
+    <h1>Vediamo insieme <span>il tuo progetto</span></h1>
+    <div class="rule"></div>
+    <p class="hero-note">
+      Seleziona ciò che ti serve: mi aiuta a capire contesto e priorità prima di inviarti il materiale introduttivo (Welcome Book e documento di orientamento).
+    </p>
+    <a class="cta secondary" href="index.html">Torna alla home</a>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="card">
+      <h3>Checklist iniziale</h3>
+      <p class="micro">Niente spam: serve solo a impostare bene la conversazione.</p>
+
+      <form id="preform">
+        <p><strong>Tipologia</strong></p>
+        <p>
+          <label><input type="checkbox" name="tipo" value="Nuova costruzione"> Nuova costruzione</label><br>
+          <label><input type="checkbox" name="tipo" value="Ristrutturazione residenziale"> Ristrutturazione residenziale</label><br>
+          <label><input type="checkbox" name="tipo" value="Hospitality"> Hospitality</label><br>
+          <lab
