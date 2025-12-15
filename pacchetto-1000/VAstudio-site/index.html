@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>victoriarchontis STUDIO | Architettura, Interior & Lighting in Sud Sardegna</title>
-  <meta name="description" content="Architettura, interior & lighting e pratiche/direzione lavori per seconde case e ospitalità in Sud Sardegna. Metodo chiaro, progetto costruibile, coerenza materica e luce come firma.">
+  <!-- FEEDBACK: no “Sud Sardegna” -->
+  <title>victoriarchontis STUDIO | Architettura, Interior & Lighting in Sardegna</title>
+  <meta name="description" content="Architettura, interior & lighting e regia del processo (Direzione Lavori & Home Shopping) per residenziale e hospitality in Sardegna. Metodo chiaro, progetto costruibile, coerenza materica e luce come firma.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
+  <!-- FEEDBACK: tipografia Calibri Light -> rimuovo Google Fonts -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,16 +17,16 @@
 <header>
   <div class="nav">
     <a class="brand" href="index.html" aria-label="Home">
-  <span class="brand-name">victoriarchontis STUDIO</span>
-</a>
-
+      <span class="brand-name">victoriarchontis STUDIO</span>
+    </a>
 
     <nav class="menu" aria-label="Navigazione principale">
       <a href="about.html">About</a>
       <a href="servizi.html">Servizi</a>
       <a href="progetti.html">Progetti</a>
       <a href="blog.html">Blog</a>
-      <a href="#contatti">Contatti</a>
+      <!-- FEEDBACK: CTA non deve atterrare sui contatti; contatti resta, ma non come atterraggio CTA -->
+      <a href="#recapiti">Contatti</a>
     </nav>
   </div>
 </header>
@@ -33,33 +34,32 @@
 <main>
 
   <!-- HERO -->
-  <section class="section">
+  <!-- FEEDBACK: campitura chiara di supporto -->
+  <section class="section section--cloud">
     <div class="wrap">
 
+      <!-- FEEDBACK: geografia -->
+      <div class="tagline">carloforte · sardegna</div>
+
+      <!-- FEEDBACK: non aprire con “seconde case” -->
       <h1>
         Architettura, Interior &amp; Lighting
-        <span>in Sud Sardegna</span>
+        <span>per residenziale e hospitality</span>
       </h1>
 
       <div class="rule"></div>
-      <div class="tagline">methodic creativity</div>
 
       <p>
-        Se stai ristrutturando una seconda casa o un progetto di ospitalità e vuoi evitare confusione,
-        ripensamenti e scelte “di pancia”, qui trovi un percorso chiaro.
+        Un percorso chiaro per arrivare a un progetto costruibile: dall’idea alle scelte, fino al coordinamento del processo,
+        con coerenza materica e lighting design come parte dell’architettura.
       </p>
 
-      <p>
-        Ti accompagno dall’idea al cantiere con regia completa (concept → scelte → esecutivi → coordinamento),
-        coerenza materica e lighting design come parte dell’architettura — non come accessorio.
-      </p>
-
-      <a href="#contatti" class="cta">Parliamo del tuo progetto</a>
+      <!-- FEEDBACK: CTA + schermata intermedia (questionario) -->
+      <a href="#questionario" class="cta">Vediamo insieme il tuo progetto</a>
       <a href="progetti.html" class="cta secondary">Vedi i progetti</a>
 
       <!-- PLACEHOLDER VISIVO (per cliente non tech) -->
       <div class="project-media" style="margin-top:28px;">
-        <!-- Quando hai la foto: <img src="images/home-hero.jpg" alt="Progetto in Sud Sardegna – architettura e luce"> -->
         <div class="placeholder">
           Placeholder immagine Home (esempio consigliato):<br>
           “esterno + dettaglio materia” oppure “interno + scena luce”
@@ -70,35 +70,92 @@
   </section>
 
   <!-- AREE -->
-  <section class="section soft">
+  <!-- FEEDBACK: inserisco campitura controllata “marrone” -->
+  <section class="section section--tint">
     <div class="wrap">
       <h2>Tre aree, una regia unica</h2>
       <div class="rule"></div>
 
       <div class="grid3">
+        <!-- FEEDBACK: Architettura prima (ok) -->
         <div>
           <h3>Architettura</h3>
           <p>
-            Volumi, aperture, prospetti e rapporto con il contesto.
+            Nuovi progetti, ristrutturazioni residenziali e hospitality.
             Progetto per essere costruito: durabilità, manutenzione, scelte verificabili.
           </p>
         </div>
 
+        <!-- FEEDBACK: ristrutturazioni/seconde case non come primo messaggio; le includo qui -->
         <div>
-          <h3>Interior &amp; Lighting</h3>
+          <h3>Ristrutturazioni</h3>
           <p>
-            Palette controllate, finiture opache, materiali coerenti.
-            La luce definisce atmosfera, comfort e percezione della materia: è parte del progetto.
+            Interventi completi e parziali, incluse seconde case, con impostazione progettuale chiara
+            e coerenza tra scelte, budget e risultato.
           </p>
         </div>
 
+        <!-- FEEDBACK: no “Pratiche edilizie” in evidenza -->
         <div>
-          <h3>Pratiche &amp; Direzione Lavori</h3>
+          <h3>Direzione Lavori &amp; Home Shopping</h3>
           <p>
-            Continuità tra progetto, autorizzazioni e cantiere.
-            Coordinamento con imprese e fornitori per ridurre errori e imprevisti.
+            Regia del processo: coordinamento cantiere, fornitori e scelte.
+            Le pratiche restano integrate nel servizio, senza essere il primo messaggio.
           </p>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUESTIONARIO (NUOVA SCHERMATA INTERMEDIA) -->
+  <!-- FEEDBACK: CTA porta qui, non ai recapiti -->
+  <section class="section section--cloud" id="questionario">
+    <div class="wrap">
+      <h2>Questionario iniziale</h2>
+      <div class="rule"></div>
+
+      <p>
+        Seleziona ciò che ti serve: mi aiuta a capire contesto e priorità prima di inviarti il materiale introduttivo
+        (Welcome Book e documento di orientamento).
+      </p>
+
+      <div class="card">
+        <h3>Checklist</h3>
+        <p class="micro">Compilazione rapida. Puoi aggiornare tutto in qualsiasi momento.</p>
+
+        <form id="preform" class="form">
+          <fieldset>
+            <legend>Tipologia</legend>
+            <label><input type="checkbox" name="tipo" value="Nuova costruzione"> Nuova costruzione</label><br>
+            <label><input type="checkbox" name="tipo" value="Ristrutturazione residenziale"> Ristrutturazione residenziale</label><br>
+            <label><input type="checkbox" name="tipo" value="Hospitality"> Hospitality</label><br>
+            <label><input type="checkbox" name="tipo" value="Seconda casa"> Seconda casa</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Di cosa hai bisogno</legend>
+            <label><input type="checkbox" name="bisogno" value="Concept e layout"> Concept e layout</label><br>
+            <label><input type="checkbox" name="bisogno" value="Progetto esecutivo"> Progetto esecutivo</label><br>
+            <label><input type="checkbox" name="bisogno" value="Direzione Lavori"> Direzione Lavori</label><br>
+            <label><input type="checkbox" name="bisogno" value="Home Shopping"> Home Shopping</label>
+          </fieldset>
+
+          <p>
+            <label>Tempistiche (se le conosci)<br>
+              <input type="text" name="tempistiche" placeholder="es. entro 3 mesi / estate 2026">
+            </label>
+          </p>
+
+          <p>
+            <label>Note<br>
+              <textarea name="note" rows="6" placeholder="Vincoli, budget indicativo, località, ecc."></textarea>
+            </label>
+          </p>
+
+          <button class="cta" type="submit">Salva e vai ai recapiti</button>
+          <a class="cta secondary" href="#recapiti">Salta e vai ai recapiti</a>
+        </form>
       </div>
 
     </div>
@@ -138,10 +195,11 @@
     </div>
   </section>
 
-  <!-- CONTATTI -->
-  <section class="section soft" id="contatti">
+  <!-- RECAPITI / CONTATTI (DOPO QUESTIONARIO) -->
+  <!-- FEEDBACK: recapiti e social presenti ma non come primo contenuto -->
+  <section class="section soft" id="recapiti">
     <div class="wrap">
-      <h2>Contatti</h2>
+      <h2>Recapiti e social</h2>
       <div class="rule"></div>
 
       <p>
@@ -151,6 +209,13 @@
       <p>
         Email: <a href="mailto:info@victoriarchontistudio.it">info@victoriarchontistudio.it</a><br>
         Telefono: <a href="tel:+393481498583">+39 348 1498583</a>
+      </p>
+
+      <!-- FEEDBACK: social subito dopo i recapiti (sostituisci i link reali) -->
+      <p style="margin-top:18px">
+        <a class="cta secondary" href="#" aria-label="Instagram">Instagram</a>
+        <a class="cta secondary" href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a class="cta secondary" href="#" aria-label="Pinterest">Pinterest</a>
       </p>
     </div>
   </section>
@@ -163,12 +228,33 @@
       <span class="footer-name">victoriarchontis STUDIO</span>
     </div>
 
+    <!-- FEEDBACK: aggiorno naming footer -->
     <p class="footer-desc">
-      Architettura · Interior &amp; Lighting · Pratiche &amp; Direzione Lavori
+      Architettura · Interior &amp; Lighting · Direzione Lavori &amp; Home Shopping
     </p>
   </div>
 </footer>
 
+<script>
+  (function(){
+    const form = document.getElementById('preform');
+    if(!form) return;
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const fd = new FormData(form);
+      const payload = {
+        tipo: fd.getAll('tipo'),
+        bisogno: fd.getAll('bisogno'),
+        tempistiche: fd.get('tempistiche') || '',
+        note: fd.get('note') || '',
+        ts: new Date().toISOString()
+      };
+      localStorage.setItem('vx_preform', JSON.stringify(payload));
+      window.location.hash = '#recapiti';
+    });
+  })();
+</script>
 
 </body>
 </html>
