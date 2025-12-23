@@ -1,12 +1,18 @@
-:root{
-  /* Palette confermata cliente */
-  --sand:#ECD5BC;     /* sfondo principale */
-  --soft:#D9BAA7;     /* sezioni alternate */
-  --plaster:#ECD5BC;  /* chiaro/box */
-  --brown:#745237;    /* testo primario */
-  --brown2:#856953;   /* testo secondario */
-  --accent:#CD3C36;   /* accento */
-  --max:980px;
+:root {
+  /* Palette finale cliente */
+  --bg: #282625;              /* dune */
+  --text: #d9baa7;            /* cameo */
+  --text-muted: #695f5f;      /* scorpion */
+
+  --accent: #7f5637;          /* potters-clay */
+  --accent-strong: #70492d;   /* old-copper */
+
+  --line: rgba(217,186,167,0.22);
+  --panel: rgba(217,186,167,0.08);
+}
+
+.muted {
+  color: var(--text-muted);
 }
 
 *{box-sizing:border-box}
