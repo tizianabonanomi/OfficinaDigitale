@@ -5,11 +5,7 @@
     <title>Apertura ticket – Officina Digitale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google Font: Actor -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Actor&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet" />
 
     <style>
       :root {
@@ -19,9 +15,7 @@
         --muted: #e7dcd0;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       body {
         margin: 0;
@@ -39,29 +33,17 @@
         padding: 32px 18px 70px;
       }
 
-      h1 {
-        font-size: 26px;
-        margin-bottom: 18px;
-      }
+      h1 { font-size: 26px; margin-bottom: 18px; }
+      h2 { font-size: 21px; margin-top: 32px; margin-bottom: 12px; }
 
-      h2 {
-        font-size: 21px;
-        margin-top: 32px;
-        margin-bottom: 12px;
-      }
-
-      p {
-        margin-bottom: 14px;
-      }
+      p { margin-bottom: 14px; }
 
       ul {
         margin: 0 0 18px 1.2rem;
         padding: 0;
       }
 
-      li {
-        margin-bottom: 6px;
-      }
+      li { margin-bottom: 6px; }
 
       .pill {
         display: inline-block;
@@ -70,19 +52,26 @@
         background: rgba(0, 0, 0, 0.18);
         font-size: 13px;
         margin-top: 6px;
+        margin-right: 6px;
       }
 
       .note {
         font-size: 14px;
         opacity: 0.85;
-        margin-top: 4px;
+        margin-top: 6px;
       }
 
-      .cta-box {
+      .box {
         margin-top: 24px;
-        padding: 18px 18px;
+        padding: 18px;
         border-radius: 12px;
         background: rgba(0, 0, 0, 0.18);
+      }
+
+      .price {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 6px;
       }
 
       .cta-btn {
@@ -101,107 +90,101 @@
       }
 
       code {
-        font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas,
-          "Liberation Mono", "Courier New", monospace;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 14px;
         background: rgba(0, 0, 0, 0.22);
         padding: 2px 5px;
         border-radius: 4px;
       }
 
-      a {
-        color: var(--text);
-        text-decoration: underline;
-      }
-
-      @media (max-width: 480px) {
-        body {
-          font-size: 17px;
-        }
-
-        h1 {
-          font-size: 24px;
-        }
-
-        h2 {
-          font-size: 20px;
-        }
-
-        .page {
-          padding: 28px 16px 60px;
-        }
-      }
+      a { color: var(--text); text-decoration: underline; }
     </style>
   </head>
 
   <body>
     <main class="page">
+
       <h1>Apertura ticket</h1>
       <p>
         Il ticket è il modo più semplice e ordinato per richiedere un intervento
-        specifico su sito, contenuti o struttura digitale senza attivare un pacchetto
-        ricorrente.
+        mirato sul sito, senza attivare pacchetti ricorrenti o nuovi progetti.
       </p>
+
       <span class="pill">interventi mirati</span>
       <span class="pill">tempo protetto</span>
-      <span class="pill">flessibilità</span>
+      <span class="pill">perimetro chiaro</span>
 
-      <h2>Quando usare un ticket</h2>
-      <p>Puoi richiedere l’apertura di un ticket, ad esempio, quando hai bisogno di:</p>
-      <ul>
-        <li>aggiornare una pagina o un testo specifico;</li>
-        <li>aggiungere o sostituire immagini in una sezione già esistente;</li>
-        <li>pubblicare un nuovo progetto con materiale già pronto;</li>
-        <li>piccole modifiche alla struttura (menu, collegamenti interni, ecc.);</li>
-        <li>un chiarimento tecnico o un controllo puntuale su un aspetto del sito.</li>
-      </ul>
+      <h2>Tipologie di ticket e tariffe</h2>
 
-      <h2>Cosa indicare nel ticket</h2>
-      <p>Per evitare scambi infiniti di email, ogni ticket dovrebbe contenere:</p>
-      <ul>
-        <li>una breve descrizione della richiesta;</li>
-        <li>l’URL della pagina interessata (se esiste già);</li>
-        <li>il materiale da usare (testi, immagini, file, link);</li>
-        <li>l’eventuale priorità o scadenza;</li>
-        <li>se il ticket è legato a un pacchetto attivo oppure no.</li>
-      </ul>
+      <div class="box">
+        <p><strong>Ticket S — intervento puntuale</strong></p>
+        <ul>
+          <li>aggiornamento di un testo o sezione;</li>
+          <li>sostituzione immagini fornite;</li>
+          <li>piccole correzioni di layout o link;</li>
+          <li>verifica tecnica mirata.</li>
+        </ul>
+        <div class="price">€ 90</div>
+      </div>
 
-      <div class="cta-box">
-        <p><strong>Come aprire un ticket</strong></p>
+      <div class="box">
+        <p><strong>Ticket M — intervento editoriale / strutturale</strong></p>
+        <ul>
+          <li>pubblicazione nuovo progetto con materiale completo;</li>
+          <li>ristrutturazione di una pagina esistente;</li>
+          <li>aggiornamenti multipli coordinati;</li>
+          <li>ottimizzazione contenuti non strategica.</li>
+        </ul>
+        <div class="price">€ 150</div>
+      </div>
+
+      <div class="box">
+        <p><strong>Ticket L — intervento articolato</strong></p>
+        <ul>
+          <li>interventi SEO puntuali (on-page, meta, struttura);</li>
+          <li>riorganizzazione sezioni o flussi;</li>
+          <li>refactor parziale di contenuti o struttura;</li>
+          <li>attività che richiedono più passaggi coordinati.</li>
+        </ul>
+        <div class="price">€ 240</div>
+      </div>
+
+      <p class="note">
+        Ogni ticket ha perimetro chiaro e prezzo fisso.  
+        Se la richiesta esce dallo scope del ticket, verrà proposto un nuovo inquadramento prima di procedere.
+      </p>
+
+      <h2>Come aprire un ticket</h2>
+      <div class="box">
         <p>
-          In questo momento la gestione dei ticket avviene via email. Ti basta
-          inviare un messaggio con oggetto strutturato in questo modo:
-        </p>
-        <p>
+          Invia un’email con oggetto:
+          <br />
           <code>[TICKET] Nome cliente – breve descrizione</code>
         </p>
         <p>
-          e includere nel corpo dell’email tutte le informazioni elencate sopra.
+          Includi sempre: descrizione richiesta, URL coinvolti, materiali pronti
+          e indicazione della tipologia di ticket.
         </p>
 
-        <!-- Sostituisci l'indirizzo con il tuo reale -->
-        <a
-          class="cta-btn"
-          href="mailto:lunamoonxx@hotmail.com"
-        >
+        <a class="cta-btn" href="mailto:lunamoonxx@hotmail.com">
           Apri un ticket via email
         </a>
 
         <p class="note">
-          Dopo la ricezione del ticket, ti confermerò tempi e inquadramento
-          dell’attività prima di procedere.
+          Dopo la ricezione, confermerò tipologia e tempi prima di iniziare.
         </p>
       </div>
 
       <p class="note" style="margin-top: 26px;">
-        Se hai attivo un pacchetto di supporto, i ticket verranno gestiti in
-        coerenza con le condizioni concordate (frequenza, priorità, tipo di interventi).
+        I ticket non sostituiscono attività progettuali (SEO completa, strategia,
+        riposizionamenti), che vengono sempre trattate come deliverable dedicati.
       </p>
 
       <p class="note">
         Torna ai <a href="pacchetto-1000/supporto.html">pacchetti di supporto</a> o
         alla <a href="index.html">home di Officina Digitale</a>.
       </p>
+
     </main>
   </body>
 </html>
