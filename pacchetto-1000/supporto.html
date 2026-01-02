@@ -1,168 +1,33 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pacchetti di supporto – Presenza Digitale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+<meta charset="UTF-8">
+<title>Supporto</title>
+<link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#8a6666;color:#f3eded;font-family:Actor}
+.page{max-width:860px;margin:auto;padding:32px}
+</style>
+</head>
+<body>
+<main class="page">
 
-    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet" />
+<header>
+<div class="logo"><span>/</span><span>OFFICINA DIGITALE</span></div>
+</header>
 
-    <style>
-      :root {
-        --bg: #8a6666;
-        --text: #f3eded;
-        --accent: #e38f7b;
-      }
+<h1>Supporto e manutenzione</h1>
 
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg);
-        color: var(--text);
-        font-family: "Actor", sans-serif;
-        line-height: 1.8;
-        font-size: 18px;
-      }
+<ul>
+  <li>supporto periodico</li>
+  <li>ticket singoli</li>
+  <li>supervisione</li>
+</ul>
 
-      .page {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 32px 18px 70px;
-      }
+<p>
+← <a href="index.html">Torna al pacchetto</a>
+</p>
 
-      h1 {
-        font-size: 26px;
-        margin-bottom: 22px;
-      }
-
-      h2 {
-        font-size: 22px;
-        margin-top: 32px;
-        margin-bottom: 14px;
-      }
-
-      .subtitle {
-        color: var(--accent);
-        font-weight: 700;
-        font-size: 19px;
-        margin-top: 26px;
-        margin-bottom: 10px;
-        line-height: 1.4;
-      }
-
-      .price {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 6px;
-      }
-
-      p {
-        margin-bottom: 14px;
-      }
-
-      ul {
-        margin: 0 0 20px 1.2rem;
-        padding: 0;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .note {
-        font-size: 14px;
-        opacity: 0.85;
-        margin-top: 4px;
-      }
-
-      a {
-        color: var(--text);
-        text-decoration: underline;
-      }
-
-      @media (max-width: 480px) {
-        body { font-size: 17px; }
-        h1 { font-size: 24px; }
-        h2 { font-size: 21px; }
-        .subtitle { font-size: 20px; }
-      }
-    </style>
-  </head>
-
-  <body>
-    <main class="page">
-      <h1>Pacchetti di supporto</h1>
-
-      <p>
-        I pacchetti di supporto permettono di mantenere nel tempo una presenza
-        digitale ordinata, aggiornata e coerente, senza dover gestire ogni intervento singolarmente.
-      </p>
-
-      <h2>Opzioni disponibili</h2>
-
-      <!-- 1. MANUTENZIONE TRIMESTRALE -->
-      <p class="subtitle">1. Manutenzione trimestrale</p>
-      <div class="price">€ 280 / trimestre</div>
-      <p><strong>Ideale per:</strong> chi aggiorna il sito in modo saltuario.</p>
-      <ul>
-        <li>revisione completa del sito ogni 3 mesi</li>
-        <li>aggiornamento testi e immagini esistenti</li>
-        <li>pubblicazione fino a 2 nuovi progetti per trimestre</li>
-        <li>controllo di coerenza visiva e struttura</li>
-      </ul>
-      <p class="note">
-        Per interventi fuori ciclo o urgenti è possibile aprire un
-        <a href="ticket.html">Apri un ticket</a>.
-      </p>
-
-      <!-- 2. SUPPORTO MENSILE -->
-      <p class="subtitle">2. Supporto mensile leggero</p>
-      <div class="price">€ 160 / mese</div>
-      <p><strong>Ideale per:</strong> chi aggiorna il sito con una certa regolarità.</p>
-      <ul>
-        <li>un ciclo di aggiornamento al mese</li>
-        <li>piccole correzioni e micro-modifiche</li>
-        <li>pubblicazione di 1 progetto o articolo al mese</li>
-        <li>verifica periodica di leggibilità e struttura</li>
-      </ul>
-      <p class="note">
-        Attività extra o non previste dal pacchetto vengono gestite via
-        <a href="ticket.html">ticket</a>.
-      </p>
-
-      <!-- 3. SUPERVISIONE DIGITALE -->
-      <p class="subtitle">3. Supervisione digitale essenziale</p>
-      <div class="price">€ 240 / mese</div>
-      <p><strong>Ideale per:</strong> chi desidera una guida continuativa.</p>
-      <ul>
-        <li>tutto ciò che è incluso nel supporto mensile leggero</li>
-        <li>consulenza sulla struttura dei contenuti futuri</li>
-        <li>allineamento tra sito e altri touchpoint digitali</li>
-        <li>prioritizzazione degli interventi</li>
-      </ul>
-      <p class="note">
-        Non include copywriting esteso, SEO completa o marketing.
-        Le attività operative aggiuntive passano da
-        <a href="ticket.html">ticket</a>.
-      </p>
-
-      <!-- 4. OPZIONE TICKET -->
-      <p class="subtitle" id="ticket">4. Opzione Ad Hoc – Apertura Ticket</p>
-      <div class="price">da € 90</div>
-      <p><strong>Ideale per:</strong> chi non necessita di un supporto ricorrente.</p>
-      <ul>
-        <li>interventi puntuali su richiesta</li>
-        <li>modifiche rapide, aggiornamenti o verifiche tecniche</li>
-        <li>ogni ticket ha perimetro e costo definiti</li>
-      </ul>
-      <p class="note">
-        Vai alla pagina dedicata:
-        <a href="ticket.html">Apertura ticket</a>
-      </p>
-
-      <p style="margin-top: 28px;">
-        Torna al pacchetto principale:
-      <a href="../index.html">Torna a Officina Digitale</a>      </p>
-    </main>
-  </body>
+</main>
+</body>
 </html>
